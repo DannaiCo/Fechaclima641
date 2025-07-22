@@ -111,16 +111,18 @@
       const date = document.getElementById('date');
       const weather = document.getElementById('weather');
 
-      if (currentHour >= 18) {
-        backgroundImage.src = "CLIMANOCHE.png"; // Fondo nocturno
-        clock.style.color = "#ffffff";
-        date.style.color = "#ffffff";
-        weather.style.color = "#ffffff";
-      } else {
-        backgroundImage.src = "CLIMATM.png"; // Fondo diurno
+      if (currentHour >= 6 && currentHour < 18) {
+        // De 6:00 am a 5:59 pm
+        backgroundImage.src = "CLIMATM.png";
         clock.style.color = "#002060";
         date.style.color = "#002060";
         weather.style.color = "#002060";
+      } else {
+        // De 6:00 pm a 5:59 am
+        backgroundImage.src = "CLIMANOCHE.png";
+        clock.style.color = "#ffffff";
+        date.style.color = "#ffffff";
+        weather.style.color = "#ffffff";
       }
     }
 
