@@ -29,7 +29,6 @@
       transform: translate(-50%, -50%);
       font-size: 70px;
       font-family: OpenSans, sans-serif;
-      color: #002060;
       font-weight: bold;
     }
     .date {
@@ -39,7 +38,6 @@
       transform: translate(-50%, -50%);
       font-size: 4vw;
       font-family: OpenSans, sans-serif;
-      color: #002060;
       white-space: nowrap;
       max-width: 90%;
       overflow: hidden;
@@ -52,14 +50,13 @@
       transform: translate(-50%, -50%);
       font-size: 60px;
       font-family: OpenSans, sans-serif;
-      color: #002060;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <!-- Background Image -->
-    <img id="backgroundImage" src="../CLIMATM.png" alt="Diseño de fondo" class="background" />
+    <img id="backgroundImage" src="CLIMATM.png" alt="Diseño de fondo" class="background" />
 
     <!-- Real-time clock -->
     <div id="clock" class="time"></div>
@@ -110,10 +107,20 @@
 
     function updateBackground(currentHour) {
       const backgroundImage = document.getElementById('backgroundImage');
-      if (currentHour >= 18) {
-        backgroundImage.src = "CLIMANOCHE.png"; // Cambia por el nombre de tu fondo oscuro
+      const clock = document.getElementById('clock');
+      const date = document.getElementById('date');
+      const weather = document.getElementById('weather');
+
+      if (currentHour >= 11) {
+        backgroundImage.src = "CLIMANOCHE.png"; // Fondo nocturno
+        clock.style.color = "#ffffff";
+        date.style.color = "#ffffff";
+        weather.style.color = "#ffffff";
       } else {
-        backgroundImage.src = "CLIMATM.png"; // Fondo de día
+        backgroundImage.src = "CLIMATM.png"; // Fondo diurno
+        clock.style.color = "#002060";
+        date.style.color = "#002060";
+        weather.style.color = "#002060";
       }
     }
 
