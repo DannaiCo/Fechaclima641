@@ -46,6 +46,7 @@
       left: 23%;
       transform: translate(-50%, -50%);
       font-size: 33px;
+	  font-weight: bold;
       font-family: OpenSans, sans-serif;
     }
     .weather-description {
@@ -192,8 +193,8 @@
       const weatherDescription = document.getElementById('weatherDescription');
 
       if (currentHour >= 6 && currentHour < 18) {
-        clock.style.color = "#ffffff";
-        date.style.color = "#ffffff";
+        clock.style.color = "#990000";
+        date.style.color = "#990000";
         weather.style.color = "#ffffff";
         weatherDescription.style.color = "#ffffff";
       } else {
