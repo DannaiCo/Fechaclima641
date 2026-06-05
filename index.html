@@ -46,12 +46,12 @@
       /* FECHA */
       .date {
         position: absolute;
-        top: 71%;
+        top: 78%;
         left: 24%;
         transform: translate(-50%, -50%);
-        font-size: 33px;
+        font-size: 23px;
         font-weight: bold;
-        color: #4a90e2;
+        color: #0033d3;
         text-align: center;
         line-height: 1.1;
       }
@@ -72,19 +72,19 @@
         top: 49%;
         left: 76%;
         transform: translate(-50%, -50%);
-        font-size: 57px;
+        font-size: 47px;
         font-weight: bold;
-        color: #000000;
+        color: #0033d3;
       }
 
       /* DESCRIPCIÓN */
       .weather-description {
         position: absolute;
-        top: 69%;
+        top: 67%;
         left: 77%;
         transform: translate(-50%, -50%);
         font-size: 17px;
-        color: #4a90e2;
+        color: #0033d3;
       }
 
       /* CIUDAD */
@@ -95,7 +95,7 @@
         transform: translate(-50%, -50%);
         font-size: 18px;
         font-weight: semibold;
-        color: #6b6f75;
+        color: #0033d3;
       }
     </style>
   </head>
@@ -145,7 +145,7 @@
         const day = now.getDate();
         const month = months[now.getMonth()];
 
-        document.getElementById("date").innerHTML = `${dayName}<br>${day} de ${month}`;
+        document.getElementById("date").innerHTML = `${dayName}, ${day} de ${month}`;
       }
 
       /* ========================
